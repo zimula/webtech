@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="handOnObjects.js" defer></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: ´Helvetica Neue´ Helvetica, Arial, sans-sarif;
+        }
+        body{
+            overflow: hidden; /*behavior when content doesn't fit*/
+            height: inherit;
+        }
+        h1{
+            font-size: 2rem;
+            letter-spacing: -1px;
+            position: absolute;
+            margin: 0;
+            top: -4px;
+            right: 5px;
+
+            color: #aaa;/*switch to transparent later*/
+            text-shadow: 0 0 4px white;
+        }
+        header{
+            background: #eee;
+        }
+        main{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>bouncing balls</h1>
+        <canvas></canvas>
+    </main>
+    <footer>
+        <P>RELIES ON CANVAS API, OBJECTS (CLASSES), FUNCTIONS AND COLLISION</P>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="loops.js" defer></script>
+    <style>
+        body{
+            text-align: center;
+        }
+        #canvas0{
+            width: 120;
+            height: 120;
+            background-color: #aaa;
+            margin: 10px;
+        }
+        #results{
+            background-color: #aaa;
+            margin: 10px;
+        }
+        .search{
+            margin: 10px;
+            background-color: #aaa;
+        }
+        .loop{
+            margin: 10px;
+            background-color: #aaa;
+        }
+        #contact{
+            margin: 10px;
+            background-color: #bbb;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>loops</h1>
+    </header>
+    <main>
+        <canvas id="canvas0">
+            Alt text in case display fails. 
+        </canvas>
+        
+        <div class="loop">
+            <h1>loop and print to screen</h1>
+            <button id="print">Print</button>
+            <button id="erase">Clear</button>
+            <pre id="results"></pre>    
+        </div>
+
+        <div class="search">
+            <h1>loop through list</h1>
+            <label for="search">Search by contact name</label>
+            <input id="search" type="text">
+            <button id="searchBtn">Search</button>
+            <p id="contact">Info will appear here</p>
+        </div>
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+java preparation:
+1. parameters vs. arguments: 
+2. arrays: 
+3. function:
+4. conditionals:
+5. events:
+6. flexbox:
+7. grid:

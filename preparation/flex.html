@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            text-align: center;
+            background-color: purple;
+            color: white;
+            height: 100px;
+            line-height: 100px; /*refers to height of a linebox*/
+            margin: 0;
+        }
+        section{
+            display: flex;
+            /*flex-direction: row; It is row by default*/
+            flex-wrap: wrap;
+        }
+        article{
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+            
+            flex: 1 200px;
+        }
+        article:nth-of-type(3){
+            flex:5 200px;
+            display: flex;
+            flex-flow: column;/*decides the direction of items.*/
+        }
+        article:nth-of-type(3)div:first-child{/*first div in article 3*/
+            flex: 1 100px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;     
+        }
+        
+        .buttons{
+            height: 70px;
+        }
+
+        button{
+            flex: 1;
+            margin: 5px;
+            font-size: 18px;
+            line-height: 0.8;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>sample flexbox example</h1>
+    </header>
+    <section>
+        <article>
+            <h1>Frist article</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In accusantium amet illo temporibus provident vitae fugiat officiis quis dolorum! Commodi debitis placeat tenetur perferendis eos suscipit officiis, cupiditate dolorem architecto.</p>
+        </article>
+        <article>
+            <h1>Second article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis labore similique, maxime commodi cumque eveniet tenetur esse doloremque obcaecati natus, tempora veritatis eligendi cum fuga alias deleniti placeat beatae dicta.</p>
+        </article>
+        <article>
+            <div class="buttons">
+                <button>Smile</button>
+                <button>Laugh</button>
+                <button>Wink</button>
+                <button>Shrug</button>
+                <button>Blush</button>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dolorem iure assumenda esse veritatis cum atque aliquid perferendis corrupti labore repellendus aperiam rem molestias necessitatibus, libero, dolores error eius quasi?</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti nihil molestias sit, quis ratione quibusdam aliquid nisi quam omnis, possimus rem nesciunt obcaecati, dolor numquam iste ex nam adipisci?</p>
+            </div>
+        </article>
+        <article>
+            <h1>4th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>5th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>6th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>7th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>8th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>9th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>10th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>11th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+        <article>
+            <h1>12th article</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nam optio dolore nostrum? Nemo rem quibusdam dicta, provident repudiandae obcaecati dignissimos perferendis recusandae! Consequuntur dolores asperiores deleniti facere vero repudiandae.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic libero soluta similique aperiam aut! Ducimus, voluptatibus saepe voluptates dolore vero iste deserunt natus corrupti tenetur repellendus dolores laboriosam perspiciatis sunt.</p>
+        </article>
+    </section>
+    
+    
+</body>
+</html>

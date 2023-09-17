@@ -1,0 +1,142 @@
+*{
+    margin: 2px;
+    padding: 1px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    flex-wrap: wrap;
+}
+img{
+    max-width: 100%;
+}
+
+
+.container{
+    width: 100%;
+   
+    background: linear-gradient(45deg, red, blue);
+    background-position: center;
+    background-size:cover;
+    padding: 0.5%;
+    
+    /*background-image: url(web.jpg);
+*/
+
+}
+
+
+
+
+/*entire nav bar*/
+nav{
+    width: 100%;
+    padding: 20px 0;
+    display:flex;
+}
+
+/*menu logo*/
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+/*menu design*/
+nav ul{
+    flex: 1;
+}
+
+/*how the menu items are displayed*/
+nav ul li{
+    display:inline-block;
+    margin: 10px 20px;
+    padding: 0;
+}
+
+/*link style*/
+nav ul li a{
+    color: rgb(162, 224, 104);
+    text-decoration: none;
+}
+
+/*menu button*/
+nav .btn{
+    color: rgb(162, 224, 104);
+    text-decoration: none;
+    border: 1px solid #f1ee04;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(210, 14, 236, 0.664);
+}
+
+/*content*/
+.content{
+    margin-top: 5%; 
+    display:flexbox;
+    
+    
+}
+.content h1{
+    font-size: 88px;
+    margin-bottom: 15px;
+    color: rgb(162, 224, 104);
+}
+.content p{
+    color: rgb(162, 224, 104);
+}
+.content .btn{
+    color: rgb(162, 224, 104);
+}
+.content h1 span{
+    color: rgb(241, 81, 32);
+}
+.content p{
+    line-height: 22px;
+    font-size: 14px;
+}
+.content .btn{
+    display: inline-block;
+    margin-top: 30px;
+    color: rgb(152, 224, 104);
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 1px solid #f1ee04;
+    border-radius: 30px;
+    background-color: rgba(210, 14, 236, 0.664);
+}
+.coin-list{
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.coin{
+    flex: 1 100px;
+    align-items: center;
+    font-size: 7px;
+    margin: 0 15px;
+    border: 1px solid rgb(78, 83, 75);
+    padding: 20px 30px;
+    border-radius: 8px;
+    display: block;
+
+}
+
+.coin h2{
+    color: white;
+    
+}
+.coin h3{
+    color: black;
+}
+.coin p{
+    color:rgb(241, 81, 32) ;
+    font-weight: bold;
+}
+section{
+    background-color: rgb(37, 37, 247);
+}
+section>ul{
+    list-style:none;
+}
+
+

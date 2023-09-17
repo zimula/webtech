@@ -1,0 +1,451 @@
+/*Improvements
+- switch to flex/block when it comes to smaller devices
+- column is fine for large devices*/
+/*heading*/
+*{
+   margin: 0;
+   padding: 0.2px;
+   list-style: none;
+   box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+    margin: 0;
+    background: #aaa;
+}
+img{
+    max-width: 100%;  
+    /*object-fit can be used with either cover or contain, in order to maintain size.*/
+}
+.logo1{
+    width: 4em;
+}
+header{
+    background-color: yellow;
+    margin-bottom: 0.2em;
+    font-size: 1em;
+    color: red;
+    text-align: center;
+}
+.dyor{
+    color: yellow;
+}
+
+/*paragraphs*/
+p{
+    color:white;
+}
+
+/*navigation before resizing*/
+.main-nav{
+    background-color: transparent;
+    width: 100%;
+    height: 80px;
+}
+.menu{
+    float: right;
+    margin-right: 1.5em;
+}
+.menu li{
+    display: inline-block;
+    line-height: 3.2em;
+    margin: 0.5em;
+}
+.menu li a{
+    color: white;
+    font-size: 1em;
+    text-decoration:underline;
+    text-transform: uppercase;
+    padding: 0.4em;
+    border-radius: 0.4em;
+}
+a:hover{
+    background: #1b9bff;
+    transition: 0.4s;
+}
+.checkbtn{
+    font-size: 2em;
+    color: #fff;
+    float: right;
+    line-height: 2.2em;
+    margin-right: 1.3em;
+    cursor: pointer;
+    /*only display bars at checkpoint*/
+    display: none;
+}
+/*hide checkbox too*/
+#check{
+    display: none;
+}
+
+/*nav style after resizing*/
+
+.fa-toggle-off{
+    background-color: blueviolet;
+    padding: none;
+    border: none;
+    color: white;
+}
+
+
+
+.container-jav{
+    background-color: #666;
+    display: flexbox;
+}
+
+
+
+/*main content*/
+.container-1{
+    background: linear-gradient(70deg, red, blue);
+    /*top right, bottom left*/
+    display: flexbox;
+    
+}
+.paper{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px;
+/*media querie needed here*/
+}
+.overview{
+    background: rgb(73, 90, 88);
+    padding: 2.5px;
+    column-count: 2;
+    column-width: 10em;
+    
+    
+}
+.overview > h2{
+    color: pink;
+    text-shadow:
+        2px 1px 4px red,
+        2px 1px 4px red,
+        2px 1px 4px red;
+    /*horizontal vertical shadow color*/
+}
+.overview>p{
+    text-align: left;
+}
+/*.root_img{
+    float: left;
+    width: 200px;
+    height: 200px;
+}*/
+
+
+.useful_links{
+    background: rgb(204, 196, 204);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+.useful_links > h3{
+    grid-row: 1;
+    grid-column: 2;
+}
+.sub-nav{
+    list-style: none;
+    grid-row: 2;
+    grid-column: 2/4;
+}
+.footer{
+    background: rgb(151, 95, 3);
+    text-align: center;
+}
+/*media queries for body and content*/
+@media screen and (max-width:700px){
+    .paper{
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 5px;
+    /*media querie needed here*/
+    }
+}
+@media screen and (max-width:500px){
+    .paper{
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 5px;
+    /*media querie needed here*/
+    } 
+}
+@media(max-width:590px){
+    .checkbtn{
+        font-size: 2em;
+        color: #fff;
+        line-height: 2.2em;
+        margin-right: 1.3em;
+        cursor: pointer;
+        /*only display bars at checkpoint*/
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        height: 100vh;
+        background: linear-gradient(70deg, red, blue);
+        top: 5em;
+        left: -100%; /*hide nav*/
+        text-align: center;
+        transition: all .5s;
+        width: 100%;
+    }
+    .menu li{
+        display: block;
+    }
+    #check:checked ~ .menu{
+        left: 0;
+    }
+    header{
+        display: none;
+    }
+
+
+}
+
+/*Boxmodel
+-OUTER DISPLAY: In relation to other elements on the page
+    BLOCK: 
+    uses all the available space.
+    breaks onto new line
+    width and height are respected.  
+    INLINE:
+    stays on the same line
+    only left and right properties will push away other boxes. 
+    
+-INNER DISPLAY: how inner elements behave.
+    use block and inline by default but can be switched to flex. 
+-Parts of the box model: 
+    - content box: the content
+    - padding box: spaces around content
+    - border box: wraps padding and content
+    - margin box: outer layer, wraps around the former and determines relationship to other elements. 
+
+
+
+
+FLEXBOX: lays out elements in one dimension. Either column or row. 
+    - set display to flex in parent element. 
+    - and set flex to 1 in child elements. 
+    - element alignment in parent element
+    - equal size of elements in layout regardless of amount of content. 
+
+    Flex-direction: determines the direction fo the items. Default is row. 
+
+    Wrapping: dealing with overflow. (flex-wrap:wrap; and adding flex: no_of_pixels; to children)
+    section{
+            display: flex;
+            //flex-direction: row; It is row by default//
+            flex-wrap: wrap;
+        }
+        article{
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+            flex: 200px;
+
+            flex:1; //proportion of available space taken by element + minimum size. 
+        }
+            //One can also choose a specific element and decide its proportion
+        article:nth-of-type(3){
+            flex:2 200px;
+        }
+        - alignment: use justify-content and order
+        - flex boxes can be nested
+
+
+
+
+
+GRID: divides the parent element into columns, rows and gutters or gaps. 
+    - set display to grid
+    - set grid-template-columns to number of columns you want (either as 1fr or pixels)
+    - set grid-template-rows to number of rows you want (can be % or pixels).
+    - individual child elements can be placed manually into the grid. 
+    - row-gap or column-gap in pixels can be added. 
+    - uses gutters to count. 
+    - span goes to end point unless gutter specified. 
+    -Grid Areas: positioning can be done using areas like so;
+        .container {
+            display: grid;
+            grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        article {
+        grid-area: content;
+        }
+
+        aside {
+            grid-area: sidebar;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+POSITIONING: 
+        - static: default. 
+        - relative:can be moved around via top, left, right and bottom.
+        - absolute: in relation to the container. z-index(stacking).
+        - fixed: in relation to the viewport.
+        - sticky: similar to fixed with some flexibility. 
+RESPONSIVE: adapt to all screen sizes and resolutions. 
+            avoidiing fixed widths. 
+                - units: 
+                    a. em: element relative to font
+                    b. rem: font relative to element
+        - Media Queries: 
+        @media screen and (min-width size){
+            .container{
+                margin: xx xx;
+            }}
+            - it changes the style if web is screen media at at least size wide.
+        - Flex and Grid can also do the same but min width must be specified.
+            - Grid: column-count:number; and column-width:number;
+                - maximum columns and minimum width of column. Simpler but there's overlap.
+                    .wrapper{
+                        column-count: 3;
+                        colum-width: 10em;
+                    }
+MEDIA QUERIES: used to change layout given the screen sized, media type etc. 
+                    @media media-type and (media-feature rule){css}
+                        - media type: whether print or screen (all, print and screen)
+                        - media expression: criteria
+                        - css rules: css. 
+                    - a media query that changes all h1 to 12pt and body color to red when width hits 600px or more.
+                    - for maximum width (max-width: xxx) is used.  
+                        @media screen and (min-width: 600px){
+                            h1{
+                                font-size: 12pt;}
+                            body{
+                                color:red;
+                            }}
+            - Can be used on orientaton and manipulation method: touch, pointers etc. 
+            - Can have multiple criteria
+            - GRID: can remedy the need for queries. 
+                            .wrapper{
+                                display:grid;
+                                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr);
+                            }
+                            - a grid that will take as many elements as can fit with a minimum size of 200px
+RESPONSIVE NAV:
+            - setting up the nav: 
+                Ul list and either have it vertical using block. Or horizontal using either inline-block/flex or flex. 
+                            - a tricky thing to deal wth is the spacing between other elements in the nav. Like icones buttons etc.
+                                    (float, spacing, padding, colors etc.)
+                            - add check buttons and labels. 
+            - responsiveness for small devices. 
+                Change styling inside a media query. 
+                            e.g.
+HTML: 
+    <nav>
+        <!--checkbox plus label and icon-->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+                <!---->
+        <img src="icons/research.ico" alt="" class="logo1">
+        
+        <ul>
+            <li><a class="active" href="nav.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Feedback</a></li>
+        </ul>
+    </nav>
+CSS: before.
+        nav{
+            background: #0082e6;
+            height: 80px;
+            width: 100%;
+        }
+        nav ul{
+            float: right;
+            margin-right: 1.5em;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 5em;
+            margin: 0.8em;
+        }
+        nav ul li a{
+            color: white;
+            font-size: 1.4em;
+            text-decoration:double underline;
+            text-transform: uppercase;
+            padding: 0.4em;
+            border-radius: 0.4em;
+        }
+        a.active, a:hover{
+            background: #1b9bff;
+            transition: 0.3s;
+        }
+        /*checkbutton label(bars):
+            - make invisible on large screens....
+        .checkbtn{
+            font-size: 2em;
+            color: #fff;
+            float: right;
+            line-height: 3.5em;
+            margin-right: 1.3em;
+            cursor: pointer;
+            display: none;  
+        }
+        #check{
+            display: none;
+        }
+CSS: after.
+        @media(max-width:810px){
+            
+            .checkbtn{
+                display: block;
+                line-height: 2.5em;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 5em;
+                left: -100%; /*hide nav......
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+            }
+            nav ul li a{
+                font-size: 1.1em;
+            }
+            a:hover, a.active{
+                background: none;
+                color: #0082e6;
+            }
+            /*bring back nav using checkbox........
+            #check:checked ~ ul{
+                left:0;
+            } 
+        }
+
+
+
+
+*/
