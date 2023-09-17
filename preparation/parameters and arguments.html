@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parameters</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 5px;
+            padding: 5px;
+        }
+        div{
+            background: #999;
+        }
+        body{
+            background: #ddd;
+        }
+        #input{
+            display:inline-flex;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <h4>default value inside body</h4>
+        <p>Should return 10 because y default = 2 and x = 5</p>
+        <p id="output"></p>
+    </div>
+    <div>
+        <h4>default value in declaration</h4>
+        <p>should return 13 because y default = 10 and x = 3</p>
+        <p id="output2"></p>
+    </div>
+    <div id="input">
+        <h4>no default value <button id="btn">add</button></h4>
+        <label for="x">x</label>
+        <select name="x" id="x">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <p>+</p>
+        <label for="y">y</label>
+        <select name="y" id="y">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <p>=</p>
+        <p id="output3">sum</p>
+    </div>
+
+
+    <script>
+        //default value of parameter inside function body. 
+        function my_func(x, y){
+            if(y === undefined){
+                y = 2;
+            }
+            return x*y;
+        }
+        document.getElementById("output").innerHTML = my_func(5);
+        
+        //default value in declaration. 
+        my_func2 = (x, y = 10)=>{
+            return x+y;
+        }
+        document.getElementById("output2").innerHTML = my_func2(3);
+
+        //no default value
+        const btn = document.getElementById("btn");
+        my_func3 = (x, y)=>{
+             x = parseInt(document.getElementById("x").value);
+             y = parseInt(document.getElementById("y").value);
+            const z = x + y;
+            document.getElementById("output3").innerHTML = z;  
+        }
+        btn.addEventListener("click", my_func3);
+    </script>
+    
+</body>
+</html>
