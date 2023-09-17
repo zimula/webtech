@@ -71,7 +71,28 @@ anatomy:
 			sidebar: additional info about main content e.g bio.
 			footer
 An example: ongoing project: displays the strukture, kind of. 
-FLEXBOX: 
+
+FLEXBOX:
+	hvad er flexbox:
+		layout metode der benytter en enkelt dimension. 
+		Enten row eller column 
+		elementerne tager al tilgængelig plads på siden 
+		eller skrumper nå der er ikke mere plads 
+		sættes på containeren, og effekten ses på underliggende elementer. 
+		fungere ved at dele pladsen på siden lige imellem underliggende elementer
+		simplest: sættes display til flex; i styling.
+	i forhold til grid:
+		flexbox: 
+			one dimensional
+			fordeling a plads mellem elementer
+			meget flexibel mht. devices.  
+		grid: 
+			multidimensional
+			no worries about positioning 
+	akserne: 
+		
+		
+ 
 
 	
 			
