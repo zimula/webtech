@@ -1,8 +1,77 @@
-java preparation:
-1. parameters vs. arguments: 
-2. arrays: 
-3. function:
-4. conditionals:
-5. events:
-6. flexbox:
-7. grid:
+html, css and javascript preparation:
+	- 6 slides plus 2 project per topic 
+1. parameters vs. arguments: presentation pending
+	function parameters: 
+		- names listed in the function definition
+	function arguments: 
+		- values received/passed to by the function
+	rules: 
+		- function do not specify data types. 
+	parameter types:
+		- default: acceptable to be undefined but good idea to set defaults like so;
+			function my_func(x,y){
+				if(y=== undefined){
+				y = 2}
+				return x * y;
+			} #x is undefined but y has a default value. 
+			or: default can be set in function declaration
+			function my_func(x, y=10){
+				return x + y}
+		- rest parameter: treated like arrays by a function like so; 
+			add = (...args)=>{
+				let sum = 0;
+				for(let arg of args){sum += args;}
+				return sum;
+			}
+	
+2. arrays: presentation pending
+3. function: presentation pending
+4. conditionals: presentation pending
+5. events:presentation pending
+6. flexbox: presentation pending
+7. grid: presentation pending
+
+
+
+
+				presentation: 
+HTML: 
+overview: 
+	hvad er html: 
+		Hyper Text Markup Language: 
+		fortæller browseren hvordan en side skal struktures
+		består af elementer: 
+			header, body, section etc. 
+		Afgrænset af tags: <h1></h1>, <div></div>, <article></article> etc.
+		Kan bruges til at gøre hvert element/ gruppe af elementer unikke. 
+		f.eks. ser et paragraph element sådan her ud,
+				billede. 
+		det er ligegyldig om det med stort eller små bogstaver. 
+		Indhold: det er imellem tags, indholdet sidder. 
+			sample code and image for emphasis
+anatomy:
+	et typisk document: 
+		doc type: fortæller typen af documentet. 
+		html: document wrapper/ root element.
+		head: 
+			ikke content. 
+			usynlig i browseren
+			metadata: meta_elements som viewport, charset.
+			styling
+			script if preffered
+			title
+		body: 
+			synlig i browseren
+			text
+			billeder etc.
+		hierarchy: typical strukture
+			header
+			navigation bar
+			main content
+			sidebar: additional info about main content e.g bio.
+			footer
+An example: ongoing project: displays the strukture, kind of. 
+FLEXBOX: 
+
+	
+			
