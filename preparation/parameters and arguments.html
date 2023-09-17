@@ -19,6 +19,9 @@
         #input{
             display:inline-flex;
         }
+        #input{
+            background: #999;
+        }
     </style>
     
 </head>
@@ -65,6 +68,10 @@
         <p>=</p>
         <p id="output3">sum</p>
     </div>
+    <div>
+        <h4>Check console to see rest parameters in actions</h4>
+        <h5>Arguments are the actual values represented by the parameters</h5>
+    </div>
 
 
     <script>
@@ -92,6 +99,18 @@
             document.getElementById("output3").innerHTML = z;  
         }
         btn.addEventListener("click", my_func3);
+        
+        //rest parameter: a feed of values parsed to the function. 
+        my_func4 = (...feed)=>{
+            let total = 0;
+            for(const i of feed){
+                total += i;
+            }
+            return total;
+        }
+        let j = my_func4(1,2,3,4,5);
+        console.log(j);
+        
     </script>
     
 </body>
