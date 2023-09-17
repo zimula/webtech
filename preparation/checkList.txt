@@ -100,7 +100,7 @@ FLEXBOX:
 			flex direction: vandret eller lodret
 				vis code
 			extra dimension via flex-wrap.
-	control: 
+	control & responsiveness: 
 		deling a plads. 
 		min. width: flex 200px f.eks. sætter min for elementerne
 		proportion per element:
@@ -112,8 +112,14 @@ FLEXBOX:
 			justify-content: position on main axis
 			flex-shrink or grow on items to fit container
 		project: trada
-GRID:
 
+GRID:
+	hvad er grid: 
+	en to dimensional layout metode. 
+	organisere sidens indhold i koloner og rækker.
+	Kan håndtere komplekse layout mønstere.
+	sættes på containeren
+	
 	i forhold til flexbox:
 		flexbox: 
 			one dimensional
@@ -124,6 +130,79 @@ GRID:
 			multidimensional
 			no worries about positioning
 			fokus er på layout
+	praksis:
+		simplest: 
+			containeren indhold forvandles til en enkelt kolone,
+				display: grid;
+			det ønsket antal kolonner indsættes via px eller fractions. 
+				grid-template-columns: n px, n px n px; 
+				|| grid-template-column: 1fr, 1fr, 1fr;
+			mulighed for plads mellem kolonner og rækker via gap.
+			eksplicit vs implicit grids: 
+				ved grid-template-column bestemmes række højde automatisk under implicit
+				under eksplicit skal højden angives.
+					grid-auto-rows: n px;
+				varierende indhold: 
+					minmax(min, auto) kan bruges. Sætter min. højde og auto max.
+		placering af indhold:
+			line-based:
+				element{
+				grid-column: start/end;
+				grid-row: nth row;}
+			grid-template-areas:
+				- skabe et mønster the passer til design.
+				- henvise til grid area i element css. 
+				**image of code. 
+	komplekse mønster:
+		- article site image 
+	projekt: trada
+
+CONDITIONALS: 
+	hvad er conditional statements:
+		simplest/ tættest er de mekanismer, der kontroller, om de fastsatte bentingelser er opfyldt,
+		før en handling udføres. 
+	formål og brug:
+		i denne sammenhænge, vælger de handlinger givet input fra documentet. 
+		f.eks. bruges det til at skifte farve afhængige af hvad man vælger. 
+	operatør:
+		comparison
+			== equal to
+			=== equal value and type
+			!= not equal
+			!== not equal value or type
+			the rest (>,<,>=,<=)
+			if(age < 18){str = "too young to buy alcohol";}
+		logical
+			&& and
+			|| or
+			! not 
+			x= 3, y = 4 then (x<10 && y>1) is true.
+		truth tables: takes 2 values and returns 1 or 0 based on some condition. 
+	events: 
+		registrering og håndtering:
+			Eventlisteners
+				element.addEventListener("click", ()=>{do something});
+			Eventhandler properties
+				button.onclick = ()=>{do something}
+			Inline eventHandlers:
+				<button onclick="alert('Hello, this is my old-fashioned event handler!');">
+	if & switch
+			Siden med conditionals. 
+	projekt:trada
+	
+			
+			
+					
+		
+		
+		
+		
+		
+		
+		
+					
+			
+			
 	
 			
 		

@@ -1,4 +1,4 @@
-/* Objective
+/* Objectives
 - Hide menu on small devices
 - Hide menu on logo click
 - add overview panels to array

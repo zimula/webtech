@@ -1,3 +1,6 @@
+/*window.onload = function(){
+    alert("hello");
+}*/
 const select = document.querySelector("#weather");
 const para = document.querySelector("#remark");
 
