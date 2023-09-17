@@ -189,6 +189,35 @@ CONDITIONALS:
 	if & switch
 			Siden med conditionals. 
 	projekt:trada
+
+FUNKTIONER:
+	hvad er funktioner:
+		en block code designet til en specific opgave.
+			f.eks. ()=>{
+						alert("Woo, this is a different message!", ""); }
+			Denne function viser en besked på browseren. 
+	parameter vs argumenter:
+		parameters: 
+			- navn på variabler der præsentere værdier der gives til funktionen. 
+		function arguments: 
+			- værdier der gives til funktionen
+				function my_func(x, y){
+					if(y === undefined){
+						y = 2;
+					}
+					return x*y;}
+				my_func(4);
+				x og y er parameter og 4 er et argument. 
+	oprette HTML elementer vha. javascript:
+		document.createElement("type");
+		element_i.appendChild("createdElement");
+		- den først linje skaber elementet. 
+		- den anden smider det på documentet. 
+	manipulere html elementer:
+		element_i.innerHtml = "str";
+		element_j.textContent = "str"
+	eksempel:arrays.html
+	projekt:function.html & trada
 	
 			
 			
