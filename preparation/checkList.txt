@@ -85,11 +85,47 @@ FLEXBOX:
 		flexbox: 
 			one dimensional
 			fordeling a plads mellem elementer
-			meget flexibel mht. devices.  
+			meget flexibel mht. devices
+			fokus er på content
 		grid: 
 			multidimensional
-			no worries about positioning 
+			no worries about positioning
+			fokus er på layout
 	akserne: 
+		flex model: 
+			container
+			main axis
+			cross axis
+			insert image.
+			flex direction: vandret eller lodret
+				vis code
+			extra dimension via flex-wrap.
+	control: 
+		deling a plads. 
+		min. width: flex 200px f.eks. sætter min for elementerne
+		proportion per element:
+			flex 1: equal amount
+		proportion for specific element: 
+			element:nth-of-type(i){flex: 2}
+			twice as much as the rest
+			align-items: where on vertical axis
+			justify-content: position on main axis
+			flex-shrink or grow on items to fit container
+		project: trada
+GRID:
+
+	i forhold til flexbox:
+		flexbox: 
+			one dimensional
+			fordeling a plads mellem elementer
+			meget flexibel mht. devices
+			fokus er på content
+		grid: 
+			multidimensional
+			no worries about positioning
+			fokus er på layout
+	
+			
 		
 		
  
