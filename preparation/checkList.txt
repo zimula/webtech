@@ -218,6 +218,57 @@ FUNKTIONER:
 		element_j.textContent = "str"
 	eksempel:arrays.html
 	projekt:function.html & trada
+
+ARRAYS AND ARRAY METHODS
+	hvad er et array: 
+		måde at hold lister af data under en variabel. 
+			- håndtering af store lister
+			- handlinger kan udføres på enkelte elementer
+			- eller alle elementer
+			- der tilføjes eller fjernes elementer. 
+	oprettelse:
+		const my_array = ["bread", "milk", "cheese", "hummus", "noodles"];
+			- kan også oprette fra strings.  
+	metoder:
+		array.length
+		array.indexOf(element)
+			position i array'et 
+		array.push(element/s)
+		array.unshift()
+			tilføje til index 0
+		array.pop()
+		array.shift()
+			fjerne fra index 0
+		array.splice()
+	iteration:
+		array.map(handling)
+			iterere og handling udføres
+		array.filter(criteria)
+			iterere og der udtrækkes
+		array.join(delimiter)
+			forvandler til string
+	eksempel:arrays.html
+		produkt data tilføjes til documentet
+	iteration vs DOM:
+		html collection object and node lists
+			document.getElementByTagName(element_tag);
+			- alle elementer med det tag i en liste der ligner et array. 
+			- array metoderne kan bruges til at manipulere dem
+			- man kan f.eks. skift font weight for alle h1'er. 
+			- min eksempel kopier fra 2 arrays til dom'en. 
+	projekt: array.html:
+
+DOM OG EVENTS
+	DOM: 
+		hvad er det
+		adgang og manipulation af elementer
+		hyppige DOM-events
+			registrering og håndtering
+		eventobjekt:
+			hvad er det
+			adgang til information
+			hvordan bruge denne information
+			
 	
 			
 			
