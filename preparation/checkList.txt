@@ -295,6 +295,7 @@ DOM OG EVENTS
 			hvordan bruge denne information
 				rette fejl i funktionalitet
 				hjælp brugere med at navigere siden
+				håndtere event bubbling
 			
 	
 			
