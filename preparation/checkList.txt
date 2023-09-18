@@ -260,14 +260,41 @@ ARRAYS AND ARRAY METHODS
 
 DOM OG EVENTS
 	DOM: 
-		hvad er det
+		hvad er det: oversigt over documentet
+			document object model: 
+				dom image
+				adgang til alt documentet. 
+				der er et et hierarki
+				giver js mulighed for at manipulere elementerne
 		adgang og manipulation af elementer
+			der flere måder at få fat i dem på
+				document.queryselector(match);
+					enkelt match
+				document.queryselectorAll(match);
+					alle matches
+					code image
 		hyppige DOM-events
+			click
+			focus
+			keydown
+			load
+			mouseover
 			registrering og håndtering
+				addEventListener();
+					metoden tilføjer en funktion til et element
+					venter på et bestemt event
+					når eventet hænder udløses function
+						code image		
 		eventobjekt:
 			hvad er det
+				et argument der indholder data om eventet.
+				der er f.eks. data om event type, target (kilde element) etc. 
 			adgang til information
+				event.getModifierState("CapLock");
+					tjekker om capslock er slået til. 
 			hvordan bruge denne information
+				rette fejl i funktionalitet
+				hjælp brugere med at navigere siden
 			
 	
 			
